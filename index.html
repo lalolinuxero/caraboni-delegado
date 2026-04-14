@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegado Caraboni</title>
+    <style>
+        /* --- FUENTES .OTF --- */
+        @font-face {
+            font-family: 'TituloJota';
+            src: url('fonts/Jota-Regular.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'CuerpoMulti';
+            src: url('fonts/MultiDisplay-Medium.otf') format('opentype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* LÍNEA 30: Ajustado a .jpg y ruta relativa */
+            background: url('img/fondo_xp.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado */
+        .header-container {
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+            color: white;
+        }
+
+        .header-title {
+            font-family: 'TituloJota', sans-serif;
+            font-size: clamp(35px, 9vw, 65px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* SUBTÍTULO CORREGIDO: Ahora usa CuerpoMulti */
+        .header-subtitle {
+            font-family: 'CuerpoMulti', sans-serif;
+            font-size: clamp(16px, 4vw, 24px);
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        /* Layout */
+        .layout-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Ventana XP */
+        .window-xp {
+            width: 100%;
+            max-width: 420px;
+            background: #FFFFFF;
+            border: 3px solid #0055E3;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .title-bar {
+            background: linear-gradient(180deg, #0058EE 0%, #3592FF 10%, #0058EE 100%);
+            padding: 6px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-family: 'Tahoma', sans-serif;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-item {
+            font-family: 'CuerpoMulti', sans-serif;
+            color: black;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 10px;
+            text-align: center;
+            transition: 0.1s;
+        }
+
+        .link-item:hover {
+            background-color: #e6e6e6;
+            color: #0055E3;
+            border: 1px dotted #666;
+        }
+
+        .footer-text {
+            font-family: 'CuerpoMulti', sans-serif;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .mascota {
+            width: 150px;
+            height: auto;
+            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+        }
+
+        @media (max-width: 768px) {
+            .layout-container { flex-direction: column; gap: 15px; }
+            .mascota { width: 110px; }
+            .mascota-perro { order: 1; }
+            .window-xp { order: 2; }
+            .mascota-clippy { order: 3; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <h1 class="header-title">DeleGado Caraboni</h1>
+        <p class="header-subtitle">Ingeniería en Ciberseguridad, Diurna (Primer Año)</p>
+    </div>
+
+    <div class="layout-container">
+        <img src="img/perro_xp.png" alt="Perro INACAP" class="mascota mascota-perro">
+
+        <div class="window-xp">
+            <div class="title-bar">
+                <span>delegado.caraboni.online</span>
+                <div style="display:flex; gap:3px;">
+                    <span style="font-size: 18px;">➖ 🔳 ❌</span>
+                </div>
+            </div>
+            <div class="content">
+                <a href="https://instagram.com/delegadocaraboni" class="link-item" target="_blank">📸 Instagram (Puedes escribirme al DM)</a>
+                <a href="https://forms.gle/NfoawJLXgKauuMVz6" class="link-item" target="_blank">📋 Encuesta (Solo 5min)</a>
+                
+                <a href="https://www.menti.com/alb5oen47ujj" class="link-item" target="_blank">🎨 El INACAP que sueñas en UNA sola palabra</a>
+                
+                <a href="https://music.youtube.com/playlist?list=PLSsowV1_qw8MB1msQk-Tg4D-d95UBHaEm&si=XV3uemr1Po6HCgJL" class="link-item" target="_blank">🎵 Escucha mi Playlist!</a>
+                
+                <p class="footer-text">"Las funciones del cargo son limitadas, mi disposición a escucharte no"</p>
+            </div>
+        </div>
+
+        <img src="img/clippy.png" alt="Clippy" class="mascota mascota-clippy">
+    </div>
+
+</body>
+</html>

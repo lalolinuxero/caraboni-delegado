@@ -1,4 +1,4 @@
-# 🚀 Candidatura Delegado Estudiantil: Eduardo Caraboni
+# 🚀 Candidatura Delegado Estudiantil: Eduardo Caraboni (evidentemente vibecodeado)
 
 ¡Bienvenido al repositorio oficial de mi campaña para **Delegado de Ingeniería en Ciberseguridad** (Primer Año)! 🛡️
 
